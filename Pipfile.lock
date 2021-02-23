@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "1bcf02b38f60de0dc1dd233a29bc5bf0b7778288d4f1c099704df55a182c2adf"
+            "sha256": "605ee05d5925520ebf5dc3f3703cc0f85cb910e2b1df81cd7375837304cbfdac"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -1117,13 +1117,6 @@
             ],
             "index": "pypi",
             "version": "==0.0.5"
-        },
-        "python-poppler": {
-            "hashes": [
-                "sha256:6843398adc9c290035646c4cf3c7bfcea9c8e04390bb9cd8fdc9bd063fb77880"
-            ],
-            "index": "pypi",
-            "version": "==0.2.2"
         },
         "pytz": {
             "hashes": [

@@ -36,7 +36,6 @@ bs4 = "*"
 poppler-utils = "*"
 geonamescache = "*"
 spacy = "==2.2.4"
-python-poppler = "*"
 
 [requires]
 python_version = "3.8"
