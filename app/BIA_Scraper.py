@@ -18,6 +18,15 @@ from spacy.tokens.span import Span
 from spacy.tokens.token import Token
 nlp = spacy.load('en_core_web_lg')
 
+###BIA CLASS 
+"""
+This is the class used in ocr.py for extracting fields from the txt file.
+"""
+
+
+### Below is code for Web scraping the judges from wikipedia
+
+
 # Extracting current Appellate Immigration Judges
 # From Wikipedia, using Beautiful Soup. Code is mostly biolerplate
 judges_url: str
@@ -58,15 +67,17 @@ as_dict = [
 judges_df: pd.DataFrame
 judges_df = pd.DataFrame.from_dict(as_dict)
 
-judges_df
 
-
+### Getting countries from geonames cache
+### This is used for finding country of origin from the case file
 
 gc = geonamescache.GeonamesCache()
 
 COUNTRIES: Iterator[str]
 COUNTRIES = gc.get_countries_by_names().keys()
 
+
+### These are methods used in the BIA Class
 
 
 def similar(a: str, return_b: str, min_score: float) -> str:
@@ -93,6 +104,7 @@ def similar_in_list(lst: List[str]) -> Callable:
         return None
     return impl
 
+
 def get_if_judge(name: str) -> Union[str, None]:
     '''
     • Returns the judge's name if a match is found. Currently, the match
@@ -117,6 +129,8 @@ def get_if_judge(name: str) -> Union[str, None]:
     
     return None
 
+
+### BIACase Class
 
 class BIACase:
     def __init__(self, text: str):
