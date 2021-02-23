@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 jupyter = "*"
 pytest = "*"
+pylint = "*"
 
 [packages]
 fastapi = "*"
@@ -14,15 +15,25 @@ uvicorn = {extras = ["standard"], version = "*"}
 sqlalchemy = "*"
 pytesseract = "*"
 pdf2image = "*"
-pillow = "*"
+Pillow = "*"
 cmake = "*"
+pylint = "*"
 pandas = "*"
 python-multipart = "*"
 dataclasses = "*"
+databases = "*"
 psycopg2-binary = "*"
 python-dotenv = "*"
 pypdf2 = "*"
 streamlit = "*"
+pdfminer = "*"
+pillow = "*"
+pdfplumber = "*"
+pypdf4 = "*"
+slate3k = "*"
+python-poppler = "*"
+tesseract = "*"
+bs4 = "*"
 
 [requires]
-python_version = "3.7.9"
+python_version = "3.8"
