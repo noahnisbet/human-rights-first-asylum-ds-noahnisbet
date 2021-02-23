@@ -18,6 +18,7 @@ from spacy.tokens.span import Span
 from spacy.tokens.token import Token
 nlp = spacy.load('en_core_web_lg')
 
+
 ###BIA CLASS 
 """
 This is the class used in ocr.py for extracting fields from the txt file.

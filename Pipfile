@@ -36,6 +36,7 @@ bs4 = "*"
 spacy = "*"
 poppler-utils = "*"
 geonamescache = "*"
+en-core-web-lg = "*"
 
 [requires]
 python_version = "3.8"
