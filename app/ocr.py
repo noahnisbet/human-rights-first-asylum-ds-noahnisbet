@@ -8,13 +8,13 @@ os.environ["OMP_NUM_THREADS"] = '1'
 os.environ["PAPERLESS_AVX2_AVAILABLE"]="false"
 os.environ["OCR_THREADS"] = '1'
 
+import poppler
 import pytesseract
 from pdf2image import convert_from_bytes, convert_from_path
 from fastapi import APIRouter, File
 import sqlalchemy
 from dotenv import load_dotenv, find_dotenv
 from sqlalchemy import create_engine
-import poppler
 from app.BIA_Scraper import BIACase
 import requests
 import pandas as pd
