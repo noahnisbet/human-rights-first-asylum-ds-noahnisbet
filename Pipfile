@@ -33,7 +33,7 @@ pypdf4 = "*"
 slate3k = "*"
 tesseract = "*"
 bs4 = "*"
-spacy = "*"
+spacy==2.2.4
 poppler-utils = "*"
 geonamescache = "*"
 
