@@ -83,7 +83,7 @@ async def create_upload_file_get_fields(file: bytes = File(...)):
     remove_pw: Callable[[str], str]
     remove_pw = lambda s: s[:s.find('?secret')]
 
-    case_data['filename'] = remove_pw(f) if 'password' in text else text[:-4]
+    case_data['filename'] = remove_pw(string) if 'password' in text else text[:-4]
 
     app = case.get_application()
     app = [ap for ap, b in app.items() if b]

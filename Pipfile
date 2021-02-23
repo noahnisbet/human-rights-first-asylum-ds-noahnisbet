@@ -35,6 +35,7 @@ python-poppler = "*"
 tesseract = "*"
 bs4 = "*"
 spacy = "*"
+poppler-utils = "*"
 
 [requires]
 python_version = "3.8"
