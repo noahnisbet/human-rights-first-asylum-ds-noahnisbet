@@ -16,9 +16,7 @@ from fastapi import APIRouter, File, UploadFile
 import sqlalchemy
 from dotenv import load_dotenv, find_dotenv
 from sqlalchemy import create_engine
-import PyPDF4
 import io
-import slate3k as slate
 import poppler
 from app.BIA_Scraper import BIACase
 from typing import List, Tuple, Union, Callable, Dict, Iterator
@@ -34,26 +32,17 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 import re
-import os
-import spacy
-from spacy.tokens.doc import Doc
-from spacy.tokens.span import Span
-from spacy.tokens.token import Token
-nlp = spacy.load('en_core_web_lg')
 
 router = APIRouter()
 # print('dir ', os.listdir('..'))
 load_dotenv(find_dotenv())
 database_url = os.getenv('DATABASE_URL')
-# print('test db?',database_url)
-
 engine = sqlalchemy.create_engine(database_url)
 
 @router.post('/insert')
 async def create_upload_file(file: bytes = File(...)):
     '''
     This function inserts a PDF and the OCR converted text into a database
-
     '''
     
     text = []
@@ -72,7 +61,7 @@ async def create_upload_file(file: bytes = File(...)):
     return {'Text': string_to_return}
 
 @router.post('/get_fields')
-async def create_upload_file(file: bytes = File(...)):
+async def create_upload_file_get_fields(file: bytes = File(...)):
     
 
     text = []

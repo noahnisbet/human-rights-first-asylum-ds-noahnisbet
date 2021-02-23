@@ -45,9 +45,9 @@ Labs 30 chose to work asynchronously, yet supporting one another through pair-co
 
  After cloning the repository, in your command line run the following commands:
  ```
- pipenv shell
- cd app
- python main.py
+pipenv install --dev
+pipenv shell
+uvicorn app.main:app --reload
  ```
  Then open localhost:8000 in your browser. The application should be running. 
 

@@ -34,6 +34,7 @@ slate3k = "*"
 python-poppler = "*"
 tesseract = "*"
 bs4 = "*"
+spacy = "*"
 
 [requires]
 python_version = "3.8"
