@@ -16,10 +16,10 @@ import spacy
 from spacy.tokens.doc import Doc
 from spacy.tokens.span import Span
 from spacy.tokens.token import Token
+from spacy import load
+import en_core_web_sm
 
-python3 -m spacy download en_core_web_lg
-
-nlp = spacy.load('en_core_web_lg')
+nlp = en_core_web_sm.load()
 
 
 ###BIA CLASS 
