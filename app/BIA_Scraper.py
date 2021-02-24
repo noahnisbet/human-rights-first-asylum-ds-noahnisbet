@@ -116,7 +116,6 @@ def get_if_judge(name: str) -> Union[str, None]:
     Wikipedia. It will 100% stop any false positives, but some leniency should
     be introduced in order to prevent any false negatives.
     '''
-
     clean_name: Callable[[str], str]
     clean_name = lambda s: s.lower() \
                             .replace(',', '') \
