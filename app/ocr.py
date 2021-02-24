@@ -8,7 +8,8 @@ os.environ["OMP_NUM_THREADS"] = '1'
 os.environ["PAPERLESS_AVX2_AVAILABLE"]="false"
 os.environ["OCR_THREADS"] = '1'
 
-import poppler
+import app.poppler.poppler
+import app.poppler.utils
 import pytesseract
 from pdf2image import convert_from_bytes, convert_from_path
 from fastapi import APIRouter, File
