@@ -116,5 +116,6 @@ async def create_upload_file_get_fields(file: bytes = File(...)):
 
     case_data['references'] = '; '.join([r for r in references if r])
     case_data['sex_of_applicant'] = case.get_seeker_sex()
-
+    
+    
     return case_data
