@@ -1,0 +1,14 @@
+# set some PostScript options
+psPaperSize letter
+psDuplex no
+psLevel level2
+psEmbedType1Fonts yes
+psEmbedTrueTypeFonts yes
+
+# set the text output options
+textEncoding UTF-8
+textEOL unix
+
+# misc options
+enableFreeType yes
+launchCommand viewer-script
