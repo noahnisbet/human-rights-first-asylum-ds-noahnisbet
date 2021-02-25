@@ -6,5 +6,5 @@ RUN python -m pip install --upgrade pip && pip install pipenv
 COPY Pipfile* ./
 RUN pipenv install --system --deploy
 COPY ./app ./app
-EXPOSE 8000
+EXPOSE 5000
 CMD uvicorn app.main:app --host 0.0.0.0
