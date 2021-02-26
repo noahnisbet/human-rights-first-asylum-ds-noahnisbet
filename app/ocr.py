@@ -19,6 +19,7 @@ from app.BIA_Scraper import BIACase
 import requests
 import pandas as pd
 import numpy as np
+import PIL
 
 router = APIRouter()
 
