@@ -4,7 +4,7 @@ os.environ["OMP_NUM_THREADS"]= '1'
 os.environ["OMP_THREAD_LIMIT"] = '1'
 os.environ["MKL_NUM_THREADS"] = '1'
 os.environ["NUMEXPR_NUM_THREADS"] = '1'
-os.environ["OMP_NUM_THREADS"]= '1'
+os.environ["OMP_NUM_THREADS"] = '1'
 os.environ["PAPERLESS_AVX2_AVAILABLE"]="false"
 os.environ["OCR_THREADS"] = '1'
 
@@ -19,7 +19,6 @@ from app.BIA_Scraper import BIACase
 import requests
 import pandas as pd
 import numpy as np
-import PIL
 
 router = APIRouter()
 
@@ -37,7 +36,7 @@ async def create_upload_file(file: bytes = File(...)):
     text = []
 
     ### Converts the bytes object recieved from fastapi
-    pages = convert_from_bytes(file,500)
+    pages = convert_from_bytes(file,100)
     
     ### Uses pytesseract to convert each page of pdf to txt
     for item in pages:
@@ -56,7 +55,7 @@ async def create_upload_file_get_fields(file: bytes = File(...)):
     text = []
 
     ### Converts the bytes object recieved from fastapi
-    pages = convert_from_bytes(file,1000)
+    pages = convert_from_bytes(file,100)
     
     ### Uses pytesseract to convert each page of pdf to txt
     for item in pages:
