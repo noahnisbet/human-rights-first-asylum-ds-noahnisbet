@@ -47,7 +47,8 @@ Labs 30 chose to work asynchronously, yet supporting one another through pair-co
  ```
 pipenv install --dev
 pipenv shell
-uvicorn app.main:app --reload
+docker build -t ds-asylum-app .
+docker run -p 8000:8000 ds-asylum-app
  ```
  Then open localhost:8000 in your browser. The application should be running. 
 

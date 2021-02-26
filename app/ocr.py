@@ -4,6 +4,7 @@ os.environ["OMP_NUM_THREADS"]= '1'
 os.environ["OMP_THREAD_LIMIT"] = '1'
 os.environ["MKL_NUM_THREADS"] = '1'
 os.environ["NUMEXPR_NUM_THREADS"] = '1'
+os.environ["OMP_NUM_THREADS"]= '1'
 os.environ["PAPERLESS_AVX2_AVAILABLE"]="false"
 os.environ["OCR_THREADS"] = '1'
 
