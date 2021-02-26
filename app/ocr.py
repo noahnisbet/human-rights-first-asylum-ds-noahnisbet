@@ -19,6 +19,7 @@ from app.BIA_Scraper import BIACase
 import requests
 import pandas as pd
 import numpy as np
+from PIL import Image
 
 router = APIRouter()
 
@@ -36,11 +37,11 @@ async def create_upload_file(file: bytes = File(...)):
     text = []
 
     ### Converts the bytes object recieved from fastapi
-    pages = convert_from_bytes(file,70,fmt='png',thread_count=3)
+    pages = convert_from_bytes(file,70,thread_count=2,size=(500, None))
     
     ### Uses pytesseract to convert each page of pdf to txt
-    for item in pages:
-        text.append(pytesseract.image_to_string(item))
+    
+    text.append(pytesseract.image_to_string(pages))
 
     ### Joins the list to an output string
     string_to_return = " ".join(text)
@@ -55,8 +56,8 @@ async def create_upload_file_get_fields(file: bytes = File(...)):
     text = []
 
     ### Converts the bytes object recieved from fastapi
-    pages = convert_from_bytes(file,70,fmt='png',thread_count=2)
-    
+    pages = convert_from_bytes(file,70,thread_count=2,size=(500, None))
+
     ### Uses pytesseract to convert each page of pdf to txt
     for item in pages:
         text.append(pytesseract.image_to_string(item))
