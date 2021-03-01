@@ -37,7 +37,7 @@ async def create_upload_file(file: bytes = File(...)):
     text = []
 
     ### Converts the bytes object recieved from fastapi
-    pages = convert_from_bytes(file,70,thread_count=2,size=(500, None))
+    pages = convert_from_bytes(file,200,fmt='png',thread_count=2)
     
     ### Uses pytesseract to convert each page of pdf to txt
     
@@ -56,7 +56,7 @@ async def create_upload_file_get_fields(file: bytes = File(...)):
     text = []
 
     ### Converts the bytes object recieved from fastapi
-    pages = convert_from_bytes(file,70,thread_count=2,size=(500, None))
+    pages = convert_from_bytes(file,200,fmt='png',thread_count=2)
 
     ### Uses pytesseract to convert each page of pdf to txt
     for item in pages:
