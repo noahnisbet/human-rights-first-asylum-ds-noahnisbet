@@ -28,8 +28,8 @@ database_url = os.getenv('DATABASE_URL')
 
 engine = sqlalchemy.create_engine(database_url)
 
-@router.post('/insert')
-async def create_upload_file(file: bytes = File(...)):
+@router.post('/get_text')
+async def get_text_from_case_file(file: bytes = File(...)):
     '''
     This function inserts a PDF and the OCR converted text into a database
     '''
@@ -50,7 +50,7 @@ async def create_upload_file(file: bytes = File(...)):
 
 
 @router.post('/get_fields')
-async def create_upload_file_get_fields(file: bytes = File(...)):
+async def get_fields_from_case_file(file: bytes = File(...)):
     
 
     text = []

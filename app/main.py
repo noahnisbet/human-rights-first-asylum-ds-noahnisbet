@@ -12,7 +12,6 @@ app = FastAPI(
     docs_url='/'
 )
 
-app.include_router(db.router, tags=['DataBase'])
 app.include_router(ocr.router, tags=['PDF Converter'])
 
 app.add_middleware(
